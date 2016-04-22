@@ -31,6 +31,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 
 import controller.ButtonController;
+import net.miginfocom.swing.MigLayout;
 
 public class MainWindow extends JFrame{
 	
@@ -184,23 +185,27 @@ public class MainWindow extends JFrame{
 		
 		// panell dos
 		JPanel jpDelete= new JPanel(new GridLayout(2,1));
-		JPanel jtop = new JPanel();
+		JPanel jtop = new JPanel(new MigLayout("","200[][]","10[]10[][]"));
 		JPanel jbot = new JPanel();
 		jtop.setBorder(BorderFactory.createLineBorder(Color.black));
 		jbot.setBorder(BorderFactory.createLineBorder(Color.black));
 		
-		JPanel aux = new JPanel(new GridLayout(7,1));
-		JPanel aux2 = new JPanel(new GridLayout(7,1));
 		text3 = new JTextField(10);
 		text4 = new JTextField(10);
 		Registrar = new JButton("Registrar");
-	   /* JPanel panel = new JPanel(new MigLayout());
-	    panel.add(firstNameLabel);
-	    panel.add(firstNameTextField);
-	    panel.add(lastNameLabel,       "gap unrelated");
-	    panel.add(lastNameTextField,   "wrap");
-	    panel.add(addressLabel);
-	    panel.add(addressTextField,    "span, grow");*/
+		
+		JLabel registrar = new JLabel("Registrar:");
+		registrar.setHorizontalAlignment(JLabel.CENTER);
+		registrar.setFont(new Font("Registrar",Font.BOLD,20));
+		JLabel nickname = new JLabel("Nickname:");
+		JLabel password = new JLabel("Password:");
+		
+	    jtop.add(registrar,"dock north");
+	    jtop.add(nickname);
+	    jtop.add(text3,"wrap");
+	    jtop.add(password);
+	    jtop.add(text4,"wrap");
+	    jtop.add(Registrar);
 		
 		/*
 		aux.add(new JLabel(""));
@@ -274,6 +279,7 @@ public class MainWindow extends JFrame{
 
 		this.setSize(610, 500);
 		this.setTitle("MemoTournament - **SERVER**");
+		this.setResizable(false);
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

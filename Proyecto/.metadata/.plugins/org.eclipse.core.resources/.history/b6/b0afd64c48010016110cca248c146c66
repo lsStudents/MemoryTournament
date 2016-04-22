@@ -184,7 +184,7 @@ public class MainWindow extends JFrame{
 		
 		// panell dos
 		JPanel jpDelete= new JPanel(new GridLayout(2,1));
-		JPanel jtop = new JPanel();
+		JPanel jtop = new JPanel(new MigLayout());
 		JPanel jbot = new JPanel();
 		jtop.setBorder(BorderFactory.createLineBorder(Color.black));
 		jbot.setBorder(BorderFactory.createLineBorder(Color.black));
@@ -194,13 +194,13 @@ public class MainWindow extends JFrame{
 		text3 = new JTextField(10);
 		text4 = new JTextField(10);
 		Registrar = new JButton("Registrar");
-	   /* JPanel panel = new JPanel(new MigLayout());
+	    JPanel panel = new JPanel(new MigLayout());
 	    panel.add(firstNameLabel);
 	    panel.add(firstNameTextField);
 	    panel.add(lastNameLabel,       "gap unrelated");
 	    panel.add(lastNameTextField,   "wrap");
 	    panel.add(addressLabel);
-	    panel.add(addressTextField,    "span, grow");*/
+	    panel.add(addressTextField,    "span, grow");
 		
 		/*
 		aux.add(new JLabel(""));

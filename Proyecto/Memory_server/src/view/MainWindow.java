@@ -187,6 +187,8 @@ public class MainWindow extends JFrame{
 		JPanel jpDelete= new JPanel(new GridLayout(2,1));
 		JPanel jtop = new JPanel(new MigLayout("","200[][]","10[]10[][]"));
 		JPanel jbot = new JPanel();
+		
+		
 		jtop.setBorder(BorderFactory.createLineBorder(Color.black));
 		jbot.setBorder(BorderFactory.createLineBorder(Color.black));
 		
@@ -205,7 +207,8 @@ public class MainWindow extends JFrame{
 	    jtop.add(text3,"wrap");
 	    jtop.add(password);
 	    jtop.add(text4,"wrap");
-	    jtop.add(Registrar);
+	    jtop.add(new JLabel(""));
+	    jtop.add(Registrar, "gapleft 30");
 		
 		/*
 		aux.add(new JLabel(""));
